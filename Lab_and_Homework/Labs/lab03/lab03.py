@@ -1,5 +1,4 @@
-from __future__ import annotations # This makes the type annotations work
-
+from __future__ import annotations  # This makes the type annotations work
 
 SOURCE_FILE = __file__
 
@@ -20,7 +19,7 @@ def flatten(s: list) -> list:
     """
     List = []
     for element in s:
-        if type(element) == list:
+        if isinstance(element, list):
             List += flatten(element)
         else:
             List += [element]
@@ -142,7 +141,7 @@ def ten_pairs(n: int) -> int:
     3
     >>> ten_pairs(55055)
     6
-    >>> ten_pairs(9641469) # 9+1, 6+4, 6+4, 4+6, 1+9, 4+6 
+    >>> ten_pairs(9641469) # 9+1, 6+4, 6+4, 4+6, 1+9, 4+6
     6
     >>> # ban iteration
     >>> from construct_check import check
